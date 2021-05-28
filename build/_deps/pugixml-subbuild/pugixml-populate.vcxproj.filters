@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\pugixml-subbuild\CMakeFiles\845b0aa76fcbaa1c292e6d1fa8b8ca2d\pugixml-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\pugixml-subbuild\CMakeFiles\845b0aa76fcbaa1c292e6d1fa8b8ca2d\pugixml-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\pugixml-subbuild\CMakeFiles\845b0aa76fcbaa1c292e6d1fa8b8ca2d\pugixml-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\pugixml-subbuild\CMakeFiles\845b0aa76fcbaa1c292e6d1fa8b8ca2d\pugixml-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\pugixml-subbuild\CMakeFiles\845b0aa76fcbaa1c292e6d1fa8b8ca2d\pugixml-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\pugixml-subbuild\CMakeFiles\845b0aa76fcbaa1c292e6d1fa8b8ca2d\pugixml-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\pugixml-subbuild\CMakeFiles\845b0aa76fcbaa1c292e6d1fa8b8ca2d\pugixml-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\pugixml-subbuild\CMakeFiles\845b0aa76fcbaa1c292e6d1fa8b8ca2d\pugixml-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\pugixml-subbuild\CMakeFiles\6e81d431caeef9f9d4e13660471ffbe4\pugixml-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\pugixml-subbuild\CMakeFiles\54d91f9ee1ff96156a5c8cdadc786c52\pugixml-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\pugixml-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\pugixml-subbuild\CMakeFiles\pugixml-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{02E0C89F-9E3F-3882-89BA-AA11C1D55605}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

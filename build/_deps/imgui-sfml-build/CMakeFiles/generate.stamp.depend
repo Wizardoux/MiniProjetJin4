@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.18/Modules/FindOpenGL.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.18/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.18/Modules/FindPackageMessage.cmake
+C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.18/Modules/GNUInstallDirs.cmake
+D:/Work/TSP2A/C++/RuinsOfScience/build/CMakeFiles/cmake.verify_globs
+D:/Work/TSP2A/C++/RuinsOfScience/build/_deps/imgui-sfml-src/CMakeLists.txt
+D:/Work/TSP2A/C++/RuinsOfScience/build/_deps/imgui-sfml-src/cmake/FindImGui.cmake

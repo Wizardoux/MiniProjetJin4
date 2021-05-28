@@ -1,0 +1,28 @@
+^D:\WORK\TSP2A\C++\RUINSOFSCIENCE\BUILD\CMAKEFILES\F82D4070F8A0161802A0CD10CFB23725\THIRTEEN-PIXEL-FONTS.TTF.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy D:/Work/TSP2A/C++/RuinsOfScience/resources/Thirteen-Pixel-Fonts.ttf D:/Work/TSP2A/C++/RuinsOfScience/build/mainLauncher
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\WORK\TSP2A\C++\RUINSOFSCIENCE\BUILD\CMAKEFILES\D8418FE6BBD0E2ED9A130E3D3A9A9D79\COPY-RESOURCES.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\WORK\TSP2A\C++\RUINSOFSCIENCE\MAINLAUNCHER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Work/TSP2A/C++/RuinsOfScience -BD:/Work/TSP2A/C++/RuinsOfScience/build --check-stamp-file D:/Work/TSP2A/C++/RuinsOfScience/build/mainLauncher/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

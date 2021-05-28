@@ -1,0 +1,3 @@
+D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\pugixml-build\Debug\pugixml.pdb
+D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\pugixml-build\pugixml.dir\Debug\pugixml.pdb
+D:\Work\TSP2A\C++\Ruins_Of_Science\MiniProjetJin4\build\_deps\pugixml-build\pugixml.dir\Debug\pugixml.pdb

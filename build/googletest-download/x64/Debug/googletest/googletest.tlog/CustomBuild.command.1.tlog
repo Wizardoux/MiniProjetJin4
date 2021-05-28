@@ -1,0 +1,162 @@
+^D:\WORK\TSP2A\C++\RUINSOFSCIENCE\BUILD\GOOGLETEST-DOWNLOAD\CMAKEFILES\2B6F99CBA3562B212690ED8580AE687E\GOOGLETEST-MKDIR.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-src
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download/googletest-prefix
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download/googletest-prefix/tmp
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download/googletest-prefix/src/googletest-stamp/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download/googletest-prefix/src
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download/googletest-prefix/src/googletest-stamp
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download/googletest-prefix/src/googletest-stamp/Debug/googletest-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\WORK\TSP2A\C++\RUINSOFSCIENCE\BUILD\GOOGLETEST-DOWNLOAD\CMAKEFILES\2B6F99CBA3562B212690ED8580AE687E\GOOGLETEST-DOWNLOAD.RULE
+setlocal
+cd D:\Work\TSP2A\C++\RuinsOfScience\build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download/googletest-prefix/tmp/googletest-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download/googletest-prefix/src/googletest-stamp/Debug/googletest-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\WORK\TSP2A\C++\RUINSOFSCIENCE\BUILD\GOOGLETEST-DOWNLOAD\CMAKEFILES\2B6F99CBA3562B212690ED8580AE687E\GOOGLETEST-UPDATE.RULE
+setlocal
+cd D:\Work\TSP2A\C++\RuinsOfScience\build\googletest-src
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download/googletest-prefix/tmp/googletest-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\WORK\TSP2A\C++\RUINSOFSCIENCE\BUILD\GOOGLETEST-DOWNLOAD\CMAKEFILES\2B6F99CBA3562B212690ED8580AE687E\GOOGLETEST-PATCH.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download/googletest-prefix/src/googletest-stamp/Debug/googletest-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\WORK\TSP2A\C++\RUINSOFSCIENCE\BUILD\GOOGLETEST-DOWNLOAD\CMAKEFILES\2B6F99CBA3562B212690ED8580AE687E\GOOGLETEST-CONFIGURE.RULE
+setlocal
+cd D:\Work\TSP2A\C++\RuinsOfScience\build\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download/googletest-prefix/src/googletest-stamp/Debug/googletest-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\WORK\TSP2A\C++\RUINSOFSCIENCE\BUILD\GOOGLETEST-DOWNLOAD\CMAKEFILES\2B6F99CBA3562B212690ED8580AE687E\GOOGLETEST-BUILD.RULE
+setlocal
+cd D:\Work\TSP2A\C++\RuinsOfScience\build\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download/googletest-prefix/src/googletest-stamp/Debug/googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\WORK\TSP2A\C++\RUINSOFSCIENCE\BUILD\GOOGLETEST-DOWNLOAD\CMAKEFILES\2B6F99CBA3562B212690ED8580AE687E\GOOGLETEST-INSTALL.RULE
+setlocal
+cd D:\Work\TSP2A\C++\RuinsOfScience\build\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download/googletest-prefix/src/googletest-stamp/Debug/googletest-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\WORK\TSP2A\C++\RUINSOFSCIENCE\BUILD\GOOGLETEST-DOWNLOAD\CMAKEFILES\2B6F99CBA3562B212690ED8580AE687E\GOOGLETEST-TEST.RULE
+setlocal
+cd D:\Work\TSP2A\C++\RuinsOfScience\build\googletest-build
+if %errorlevel% neq 0 goto :cmEnd
+D:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download/googletest-prefix/src/googletest-stamp/Debug/googletest-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\WORK\TSP2A\C++\RUINSOFSCIENCE\BUILD\GOOGLETEST-DOWNLOAD\CMAKEFILES\D11DDE969669065A7BF34E5B5DB57B13\GOOGLETEST-COMPLETE.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download/CMakeFiles/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download/CMakeFiles/Debug/googletest-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download/googletest-prefix/src/googletest-stamp/Debug/googletest-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\WORK\TSP2A\C++\RUINSOFSCIENCE\BUILD\GOOGLETEST-DOWNLOAD\CMAKEFILES\4B71BF06A2A098A4EE9671109A6EFDA9\GOOGLETEST.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\WORK\TSP2A\C++\RUINSOFSCIENCE\BUILD\GOOGLETEST-DOWNLOAD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download -BD:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download --check-stamp-file D:/Work/TSP2A/C++/RuinsOfScience/build/googletest-download/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,14 @@
+# Target labels
+ imgui-populate
+# Source files and their labels
+D:/Work/TSP2A/C++/RuinsOfScience/build/_deps/imgui-subbuild/CMakeFiles/imgui-populate
+D:/Work/TSP2A/C++/RuinsOfScience/build/_deps/imgui-subbuild/CMakeFiles/ced683edd71c5c02d53e6e2750627950/imgui-populate.rule
+D:/Work/TSP2A/C++/RuinsOfScience/build/_deps/imgui-subbuild/CMakeFiles/9e2186e28be53a9c8d0956695f3c922a/imgui-populate-complete.rule
+D:/Work/TSP2A/C++/RuinsOfScience/build/_deps/imgui-subbuild/CMakeFiles/fd877105ab71cfcad2a54ec313a3c21f/imgui-populate-install.rule
+D:/Work/TSP2A/C++/RuinsOfScience/build/_deps/imgui-subbuild/CMakeFiles/fd877105ab71cfcad2a54ec313a3c21f/imgui-populate-mkdir.rule
+D:/Work/TSP2A/C++/RuinsOfScience/build/_deps/imgui-subbuild/CMakeFiles/fd877105ab71cfcad2a54ec313a3c21f/imgui-populate-download.rule
+D:/Work/TSP2A/C++/RuinsOfScience/build/_deps/imgui-subbuild/CMakeFiles/fd877105ab71cfcad2a54ec313a3c21f/imgui-populate-update.rule
+D:/Work/TSP2A/C++/RuinsOfScience/build/_deps/imgui-subbuild/CMakeFiles/fd877105ab71cfcad2a54ec313a3c21f/imgui-populate-patch.rule
+D:/Work/TSP2A/C++/RuinsOfScience/build/_deps/imgui-subbuild/CMakeFiles/fd877105ab71cfcad2a54ec313a3c21f/imgui-populate-configure.rule
+D:/Work/TSP2A/C++/RuinsOfScience/build/_deps/imgui-subbuild/CMakeFiles/fd877105ab71cfcad2a54ec313a3c21f/imgui-populate-build.rule
+D:/Work/TSP2A/C++/RuinsOfScience/build/_deps/imgui-subbuild/CMakeFiles/fd877105ab71cfcad2a54ec313a3c21f/imgui-populate-test.rule

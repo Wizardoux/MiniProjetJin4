@@ -21,7 +21,7 @@ private:
 	void initStates();
 
 	//Ressources
-	sf::Font gameFont;
+	RessourceManager ressourceManager;
 
 public:
 	//Constructors/Destructors

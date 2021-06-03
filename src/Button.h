@@ -13,7 +13,7 @@ private:
 
 public:
 	// Constructor/Destructor
-	Button(sf::Vector2f position, const sf::Font &font, const std::string &text);
+	Button(sf::Vector2f position, const sf::Font& font, const std::string &text);
 	virtual ~Button() = default;
 
 	//Functions

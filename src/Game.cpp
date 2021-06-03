@@ -9,8 +9,7 @@ void Game::initWindow()
 
 void Game::initStates()
 {
-    states.push(std::make_unique<MainMenuState>());
-    states.push(std::make_unique<CombatState>());
+    states.push(std::make_unique<MainMenuState>(&ressourceManager, &states));
 }
 
 //Constructors/Destructors
@@ -18,7 +17,6 @@ Game::Game()
 {
     initWindow();
     initStates();
-    gameFont.loadFromFile("Thirteen-Pixel-Fonts.ttf");
 }
 
 Game::~Game()
@@ -49,6 +47,13 @@ void Game::updateSFMLEvents()
             if (!states.empty())
             {
                 states.top()->checkKeyInput(sfEvent);
+            }
+            break;
+            // key pressed
+        case sf::Event::MouseButtonPressed:
+            if (!states.empty())
+            {
+                states.top()->checkMouseInput(sfEvent, mousePos);
             }
             break;
             // we don't process other types of events

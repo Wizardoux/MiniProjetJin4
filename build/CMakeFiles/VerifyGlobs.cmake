@@ -7,9 +7,12 @@ file(GLOB NEW_GLOB LIST_DIRECTORIES true "D:/Work/TSP2A/C++/RuinsOfScience/src/*
 set(OLD_GLOB
   "D:/Work/TSP2A/C++/RuinsOfScience/src/Button.cpp"
   "D:/Work/TSP2A/C++/RuinsOfScience/src/CombatState.cpp"
-  "D:/Work/TSP2A/C++/RuinsOfScience/src/Entity.cpp"
   "D:/Work/TSP2A/C++/RuinsOfScience/src/Game.cpp"
   "D:/Work/TSP2A/C++/RuinsOfScience/src/MainMenuState.cpp"
+  "D:/Work/TSP2A/C++/RuinsOfScience/src/Player.cpp"
+  "D:/Work/TSP2A/C++/RuinsOfScience/src/RessourceManager.cpp"
+  "D:/Work/TSP2A/C++/RuinsOfScience/src/Room.cpp"
+  "D:/Work/TSP2A/C++/RuinsOfScience/src/RoomState.cpp"
   "D:/Work/TSP2A/C++/RuinsOfScience/src/State.cpp"
   "D:/Work/TSP2A/C++/RuinsOfScience/src/myMain.cpp"
   )
@@ -23,9 +26,12 @@ file(GLOB NEW_GLOB LIST_DIRECTORIES true "D:/Work/TSP2A/C++/RuinsOfScience/src/*
 set(OLD_GLOB
   "D:/Work/TSP2A/C++/RuinsOfScience/src/Button.h"
   "D:/Work/TSP2A/C++/RuinsOfScience/src/CombatState.h"
-  "D:/Work/TSP2A/C++/RuinsOfScience/src/Entity.h"
   "D:/Work/TSP2A/C++/RuinsOfScience/src/Game.h"
   "D:/Work/TSP2A/C++/RuinsOfScience/src/MainMenuState.h"
+  "D:/Work/TSP2A/C++/RuinsOfScience/src/Player.h"
+  "D:/Work/TSP2A/C++/RuinsOfScience/src/RessourceManager.h"
+  "D:/Work/TSP2A/C++/RuinsOfScience/src/Room.h"
+  "D:/Work/TSP2A/C++/RuinsOfScience/src/RoomState.h"
   "D:/Work/TSP2A/C++/RuinsOfScience/src/State.h"
   "D:/Work/TSP2A/C++/RuinsOfScience/src/myMain.h"
   )

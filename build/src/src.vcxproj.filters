@@ -7,13 +7,22 @@
     <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\CombatState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Entity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\MainMenuState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\RessourceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Room.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\RoomState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\State.cpp">
@@ -30,13 +39,22 @@
     <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\CombatState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Entity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\MainMenuState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\RessourceManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Room.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\RoomState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\State.h">

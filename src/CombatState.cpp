@@ -1,6 +1,11 @@
 #include "CombatState.h"
 #include <iostream>
 
+CombatState::CombatState(RessourceManager* manager, std::stack<std::unique_ptr<State>>* states):
+	State(manager, states)
+{
+}
+
 void CombatState::render(sf::RenderTarget& target)
 {
 }
@@ -16,6 +21,10 @@ void CombatState::checkKeyInput(sf::Event event)
 	{
 		exitState();
 	}
+}
+
+void CombatState::checkMouseInput(sf::Event event, sf::Vector2f mousePos)
+{
 }
 
 void CombatState::endState()

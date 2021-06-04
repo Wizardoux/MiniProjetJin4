@@ -4,6 +4,9 @@
     <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Button.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Character.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\CombatState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -28,12 +31,18 @@
     <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\State.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Weapon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\myMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Character.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\CombatState.h">
@@ -58,6 +67,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\State.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Weapon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\myMain.h">

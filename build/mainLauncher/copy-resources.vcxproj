@@ -105,10 +105,12 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Work\TSP2A\C++\RuinsOfScience\build\CMakeFiles\f82d4070f8a0161802a0cd10cfb23725\Thirteen-Pixel-Fonts.ttf.rule">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating Thirteen-Pixel-Fonts.ttf</Message>
+    <CustomBuild Include="D:\Work\TSP2A\C++\RuinsOfScience\build\CMakeFiles\f82d4070f8a0161802a0cd10cfb23725\resources.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating resources</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy D:/Work/TSP2A/C++/RuinsOfScience/resources/Thirteen-Pixel-Fonts.ttf D:/Work/TSP2A/C++/RuinsOfScience/build/mainLauncher
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Work/TSP2A/C++/RuinsOfScience/build/mainLauncher/resources
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Work/TSP2A/C++/RuinsOfScience/resources/Thirteen-Pixel-Fonts.ttf D:/Work/TSP2A/C++/RuinsOfScience/resources/buttonsci-fi.png D:/Work/TSP2A/C++/RuinsOfScience/resources/player.png D:/Work/TSP2A/C++/RuinsOfScience/resources/room.png D:/Work/TSP2A/C++/RuinsOfScience/resources/sniper.png D:/Work/TSP2A/C++/RuinsOfScience/resources/spacemarine.png D:/Work/TSP2A/C++/RuinsOfScience/resources/toxic_grenade.png D:/Work/TSP2A/C++/RuinsOfScience/resources/vaccin.png D:/Work/TSP2A/C++/RuinsOfScience/resources/weapon.png D:/Work/TSP2A/C++/RuinsOfScience/build/mainLauncher/resources
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -116,12 +118,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Work\TSP2A\C++\RuinsOfScience\resources\Thirteen-Pixel-Fonts.ttf;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\Thirteen-Pixel-Fonts.ttf</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Work\TSP2A\C++\RuinsOfScience\resources;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\resources</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating Thirteen-Pixel-Fonts.ttf</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating resources</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy D:/Work/TSP2A/C++/RuinsOfScience/resources/Thirteen-Pixel-Fonts.ttf D:/Work/TSP2A/C++/RuinsOfScience/build/mainLauncher
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Work/TSP2A/C++/RuinsOfScience/build/mainLauncher/resources
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Work/TSP2A/C++/RuinsOfScience/resources/Thirteen-Pixel-Fonts.ttf D:/Work/TSP2A/C++/RuinsOfScience/resources/buttonsci-fi.png D:/Work/TSP2A/C++/RuinsOfScience/resources/player.png D:/Work/TSP2A/C++/RuinsOfScience/resources/room.png D:/Work/TSP2A/C++/RuinsOfScience/resources/sniper.png D:/Work/TSP2A/C++/RuinsOfScience/resources/spacemarine.png D:/Work/TSP2A/C++/RuinsOfScience/resources/toxic_grenade.png D:/Work/TSP2A/C++/RuinsOfScience/resources/vaccin.png D:/Work/TSP2A/C++/RuinsOfScience/resources/weapon.png D:/Work/TSP2A/C++/RuinsOfScience/build/mainLauncher/resources
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -129,12 +133,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Work\TSP2A\C++\RuinsOfScience\resources\Thirteen-Pixel-Fonts.ttf;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\Thirteen-Pixel-Fonts.ttf</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Work\TSP2A\C++\RuinsOfScience\resources;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\resources</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating Thirteen-Pixel-Fonts.ttf</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating resources</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy D:/Work/TSP2A/C++/RuinsOfScience/resources/Thirteen-Pixel-Fonts.ttf D:/Work/TSP2A/C++/RuinsOfScience/build/mainLauncher
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Work/TSP2A/C++/RuinsOfScience/build/mainLauncher/resources
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Work/TSP2A/C++/RuinsOfScience/resources/Thirteen-Pixel-Fonts.ttf D:/Work/TSP2A/C++/RuinsOfScience/resources/buttonsci-fi.png D:/Work/TSP2A/C++/RuinsOfScience/resources/player.png D:/Work/TSP2A/C++/RuinsOfScience/resources/room.png D:/Work/TSP2A/C++/RuinsOfScience/resources/sniper.png D:/Work/TSP2A/C++/RuinsOfScience/resources/spacemarine.png D:/Work/TSP2A/C++/RuinsOfScience/resources/toxic_grenade.png D:/Work/TSP2A/C++/RuinsOfScience/resources/vaccin.png D:/Work/TSP2A/C++/RuinsOfScience/resources/weapon.png D:/Work/TSP2A/C++/RuinsOfScience/build/mainLauncher/resources
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -142,12 +148,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Work\TSP2A\C++\RuinsOfScience\resources\Thirteen-Pixel-Fonts.ttf;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\Thirteen-Pixel-Fonts.ttf</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Work\TSP2A\C++\RuinsOfScience\resources;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\resources</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating Thirteen-Pixel-Fonts.ttf</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating resources</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy D:/Work/TSP2A/C++/RuinsOfScience/resources/Thirteen-Pixel-Fonts.ttf D:/Work/TSP2A/C++/RuinsOfScience/build/mainLauncher
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Work/TSP2A/C++/RuinsOfScience/build/mainLauncher/resources
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Work/TSP2A/C++/RuinsOfScience/resources/Thirteen-Pixel-Fonts.ttf D:/Work/TSP2A/C++/RuinsOfScience/resources/buttonsci-fi.png D:/Work/TSP2A/C++/RuinsOfScience/resources/player.png D:/Work/TSP2A/C++/RuinsOfScience/resources/room.png D:/Work/TSP2A/C++/RuinsOfScience/resources/sniper.png D:/Work/TSP2A/C++/RuinsOfScience/resources/spacemarine.png D:/Work/TSP2A/C++/RuinsOfScience/resources/toxic_grenade.png D:/Work/TSP2A/C++/RuinsOfScience/resources/vaccin.png D:/Work/TSP2A/C++/RuinsOfScience/resources/weapon.png D:/Work/TSP2A/C++/RuinsOfScience/build/mainLauncher/resources
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -155,8 +163,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Work\TSP2A\C++\RuinsOfScience\resources\Thirteen-Pixel-Fonts.ttf;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\Thirteen-Pixel-Fonts.ttf</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Work\TSP2A\C++\RuinsOfScience\resources;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\resources</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
@@ -170,7 +178,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\Thirteen-Pixel-Fonts.ttf;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\resources;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\CMakeFiles\copy-resources</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
@@ -182,7 +190,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\Thirteen-Pixel-Fonts.ttf;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\resources;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\CMakeFiles\copy-resources</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
@@ -194,7 +202,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\Thirteen-Pixel-Fonts.ttf;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\resources;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\CMakeFiles\copy-resources</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
@@ -206,7 +214,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\Thirteen-Pixel-Fonts.ttf;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\resources;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Work\TSP2A\C++\RuinsOfScience\build\mainLauncher\CMakeFiles\copy-resources</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>

@@ -1,11 +1,11 @@
 #include "Room.h"
 #include <iostream>
 
-Room::Room(sf::Vector2f pos)
+Room::Room(sf::Vector2f pos, const sf::Texture* texture)
 {
 	sprite.setSize(sf::Vector2f(50.0f, 50.0f));
 	sprite.setPosition(pos);
-	sprite.setFillColor(sf::Color::Green);
+	sprite.setTexture(texture);
 }
 
 void Room::render(sf::RenderTarget& target)
@@ -13,11 +13,12 @@ void Room::render(sf::RenderTarget& target)
 	target.draw(sprite);
 }
 
-void Room::tryStartCombat(RessourceManager* manager, std::stack<std::unique_ptr<State>>* states)
+bool Room::tryStartCombat()
 {
 	if (!alreadyTriggered)
 	{
-		states->push(std::make_unique<CombatState>(manager, states));
 		alreadyTriggered = true;
+		return true;
 	}
+	return false;
 }

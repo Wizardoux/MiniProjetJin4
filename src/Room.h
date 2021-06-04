@@ -14,12 +14,12 @@ private:
 	bool alreadyTriggered = false;
 
 public:
-	Room(sf::Vector2f pos);
+	Room(sf::Vector2f pos, const sf::Texture* texture);
 	virtual ~Room() = default;
 
 	// Functions
 	void render(sf::RenderTarget& target);
-	void tryStartCombat(RessourceManager* manager, std::stack<std::unique_ptr<State>>* states);
+	bool tryStartCombat();
 	void useRoom() { alreadyTriggered = true; }
 };
 

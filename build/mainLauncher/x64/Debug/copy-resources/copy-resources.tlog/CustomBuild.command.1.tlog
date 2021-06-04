@@ -1,6 +1,8 @@
-^D:\WORK\TSP2A\C++\RUINSOFSCIENCE\BUILD\CMAKEFILES\F82D4070F8A0161802A0CD10CFB23725\THIRTEEN-PIXEL-FONTS.TTF.RULE
+^D:\WORK\TSP2A\C++\RUINSOFSCIENCE\BUILD\CMAKEFILES\F82D4070F8A0161802A0CD10CFB23725\RESOURCES.RULE
 setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy D:/Work/TSP2A/C++/RuinsOfScience/resources/Thirteen-Pixel-Fonts.ttf D:/Work/TSP2A/C++/RuinsOfScience/build/mainLauncher
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory D:/Work/TSP2A/C++/RuinsOfScience/build/mainLauncher/resources
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different D:/Work/TSP2A/C++/RuinsOfScience/resources/Thirteen-Pixel-Fonts.ttf D:/Work/TSP2A/C++/RuinsOfScience/resources/buttonsci-fi.png D:/Work/TSP2A/C++/RuinsOfScience/resources/player.png D:/Work/TSP2A/C++/RuinsOfScience/resources/room.png D:/Work/TSP2A/C++/RuinsOfScience/resources/sniper.png D:/Work/TSP2A/C++/RuinsOfScience/resources/spacemarine.png D:/Work/TSP2A/C++/RuinsOfScience/resources/toxic_grenade.png D:/Work/TSP2A/C++/RuinsOfScience/resources/vaccin.png D:/Work/TSP2A/C++/RuinsOfScience/resources/weapon.png D:/Work/TSP2A/C++/RuinsOfScience/build/mainLauncher/resources
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

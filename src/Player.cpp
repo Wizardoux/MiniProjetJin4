@@ -1,10 +1,9 @@
 #include "Player.h"
 
-Player::Player(sf::Vector2f pos)
+Player::Player(sf::Vector2f pos, const sf::Texture* texture):
+	Character(texture)
 {
-	sprite.setSize(sf::Vector2f(50.0f, 50.0f));
 	sprite.setPosition(pos);
-	sprite.setFillColor(sf::Color::Red);
 }
 
 void Player::moveFrwd()
@@ -25,7 +24,23 @@ void Player::moveBack()
 	}
 }
 
-void Player::render(sf::RenderTarget& target)
+void Player::increaseActionPoints()
 {
-	target.draw(sprite);
+	actionPoint += 5;
+}
+
+void Player::refreshActionPoints()
+{
+	actionPoint = 5;
+}
+
+bool Player::tryUseWeapon(int weaponIndex, Character& target)
+{
+	if (actionPoint >= inventory[weaponIndex]->getCost())
+	{
+		actionPoint -= inventory[weaponIndex]->getCost();
+		Character::useWeapon(weaponIndex, target);
+		return true;
+	}
+	return false;
 }

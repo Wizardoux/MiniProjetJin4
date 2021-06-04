@@ -1,5 +1,8 @@
-﻿  MainMenuState.cpp
+﻿  CombatState.cpp
+  Game.cpp
+  MainMenuState.cpp
   Room.cpp
   RoomState.cpp
+  myMain.cpp
   Génération de code en cours...
   src.vcxproj -> D:\Work\TSP2A\C++\RuinsOfScience\build\src\Debug\src.lib

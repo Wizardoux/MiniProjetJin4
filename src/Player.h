@@ -1,25 +1,26 @@
 #pragma once
-#include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
-#include <SFML/Audio.hpp>
-#include <SFML/System.hpp>
+#include "Character.h"
 
-class Player
+class Player: public Character
 {
 private:
 	int indexRoom = 0;
-	sf::RectangleShape sprite;
+	int actionPoint = 5;
 
 public:
-	Player(sf::Vector2f pos);
+	Player(sf::Vector2f pos, const sf::Texture* texture);
 	virtual ~Player() = default;
 
-	// Functions
+	//Others Functions
 	void moveFrwd();
 	void moveBack();
-	void render(sf::RenderTarget& target);
+	void increaseActionPoints();
+	void refreshActionPoints();
+	bool tryUseWeapon(int weaponIndex, Character& target);
 
 	//Getter
 	int getIndex() const { return indexRoom; }
+	int getnbWeapons() const { return inventory.size(); }
+	int getAction() const { return actionPoint; }
 };
 

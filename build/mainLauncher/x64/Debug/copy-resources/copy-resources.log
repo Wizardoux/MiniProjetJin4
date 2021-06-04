@@ -1,1 +1,3 @@
-﻿
+﻿  Generating resources
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(238,5): warning MSB8064: la build personnalisée pour l'élément "D:\Work\TSP2A\C++\RuinsOfScience\build\CMakeFiles\f82d4070f8a0161802a0cd10cfb23725\resources.rule" est réussie, mais la dépendance spécifiée "d:\work\tsp2a\c++\ruinsofscience\resources" n'existe pas. Cela peut entraîner un fonctionnement incorrect de la build incrémentielle.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(238,5): warning MSB8065: la build personnalisée pour l'élément "D:\Work\TSP2A\C++\RuinsOfScience\build\CMakeFiles\f82d4070f8a0161802a0cd10cfb23725\resources.rule" est réussie, mais la sortie spécifiée "d:\work\tsp2a\c++\ruinsofscience\build\mainlauncher\resources" n'a pas été créée. Cela peut entraîner un fonctionnement incorrect de la build incrémentielle.

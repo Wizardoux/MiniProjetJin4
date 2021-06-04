@@ -267,6 +267,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Button.cpp" />
     <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Button.h" />
+    <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Character.cpp" />
+    <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Character.h" />
     <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\CombatState.cpp" />
     <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\CombatState.h" />
     <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Game.cpp" />
@@ -283,6 +285,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\RoomState.h" />
     <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\State.cpp" />
     <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\State.h" />
+    <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Weapon.cpp" />
+    <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Weapon.h" />
     <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\myMain.cpp" />
     <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\myMain.h" />
   </ItemGroup>
@@ -300,6 +304,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\pugixml-build\pugixml.vcxproj">
       <Project>{57D4DB22-1F97-3FA7-BC92-D4936F79D580}</Project>
       <Name>pugixml</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\sfml-build\src\SFML\Audio\sfml-audio.vcxproj">
+      <Project>{65E32547-4B63-3ECA-ADAA-1B1663F9AA6E}</Project>
+      <Name>sfml-audio</Name>
     </ProjectReference>
     <ProjectReference Include="D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\sfml-build\src\SFML\Graphics\sfml-graphics.vcxproj">
       <Project>{FE06BBE2-4FE0-3A86-91FF-E875BA61FEC1}</Project>

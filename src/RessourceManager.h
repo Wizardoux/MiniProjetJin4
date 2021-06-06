@@ -3,6 +3,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/Audio.hpp>
 #include <SFML/System.hpp>
+#include "Weapon.h"
 
 class RessourceManager
 {
@@ -16,6 +17,12 @@ private:
 	sf::Texture menuTexture;
 	sf::Texture interiorTexture;
 	sf::Texture spaceshipTexture;
+	sf::Texture blasterTexture;
+	sf::Texture sniperTexture;
+	sf::Texture grenadeTexture;
+	sf::Texture vaccinTexture;
+	sf::Texture flagTexture;
+	sf::Texture textboxTexture;
 
 	//Sounds
 	sf::Music menuMusic;
@@ -23,10 +30,18 @@ private:
 	sf::SoundBuffer SFXbuffer;
 	sf::Sound SFXsound;
 
+	//Weapons DataBase
+	std::vector<Weapon> weapons;
+
 public:
 	//Constructors/Destructors
 	RessourceManager();
 	virtual ~RessourceManager() = default;
+
+	//InitFunction
+	void initWeapons();
+	void initTextures();
+	void initSounds();
 
 	//Getter
 	sf::Font* getFont() { return &gameFont; }
@@ -36,13 +51,17 @@ public:
 	sf::Texture* getRoomTexture() { return &roomTexture; }
 	sf::Texture* getInteriorTexture() { return &interiorTexture; }
 	sf::Texture* getMenuTexture() { return &menuTexture; }
-	sf::Texture* getspaceshipTexture() { return &spaceshipTexture; }
+	sf::Texture* getSpaceshipTexture() { return &spaceshipTexture; }
+	sf::Texture* getFlagTexture() { return &flagTexture; }
+	sf::Texture* getTextboxTexture() { return &textboxTexture; }
+	//Weapon Getter
+	Weapon getRandomWeapon();
 
 	//Sounds Functions
-	void playMenuMusic();
-	void playGameMusic();
-	void stopMenuMusic();
-	void stopGameMusic();
-	void playBlaster();
+	void playMenuMusic() { menuMusic.play(); }
+	void playGameMusic() { gameMusic.play(); }
+	void stopMenuMusic() { menuMusic.stop(); }
+	void stopGameMusic() { gameMusic.stop(); }
+	void playBlaster() { SFXsound.play(); }
 };
 

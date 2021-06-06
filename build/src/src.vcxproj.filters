@@ -34,6 +34,9 @@
     <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Weapon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\WeaponButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\myMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -70,6 +73,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Weapon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\WeaponButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\myMain.h">

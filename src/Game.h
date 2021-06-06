@@ -11,17 +11,15 @@ class Game final
 {
 private:
 	//Variables
-	sf::RenderWindow window = sf::RenderWindow(sf::VideoMode(800, 600), "Ruins of Science");
+	sf::RenderWindow window = sf::RenderWindow(sf::VideoMode(1020, 600), "Ruins of Science");
 	sf::Event sfEvent;
 	std::stack<std::unique_ptr<State>> states;
 	sf::Vector2f mousePos;
+	RessourceManager ressourceManager;
 
-	//Init
+	//Init Functions
 	void initWindow();
 	void initStates();
-
-	//Ressources
-	RessourceManager ressourceManager;
 
 public:
 	//Constructors/Destructors

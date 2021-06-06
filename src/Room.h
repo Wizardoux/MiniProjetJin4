@@ -10,16 +10,19 @@
 class Room
 {
 private:
-	sf::RectangleShape sprite;
+	sf::RectangleShape roomSprite;
+	sf::RectangleShape contentSprite;
 	bool alreadyTriggered = false;
+	bool victory = false;
 
 public:
-	Room(sf::Vector2f pos, const sf::Texture* texture);
+	Room(sf::Vector2f pos, const sf::Texture* roomTexture, const sf::Texture* ennemyTexture);
 	virtual ~Room() = default;
 
 	// Functions
 	void render(sf::RenderTarget& target);
-	bool tryStartCombat();
+	int enterRoom();
 	void useRoom() { alreadyTriggered = true; }
+	void setFlag(const sf::Texture* flagTexture);
 };
 

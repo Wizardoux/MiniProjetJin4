@@ -1,10 +1,1 @@
-﻿  Building Custom Rule D:/Work/TSP2A/C++/RuinsOfScience/build/_deps/imgui-sfml-src/CMakeLists.txt
-  imgui-SFML.cpp
-  imgui.cpp
-  imgui_draw.cpp
-  imgui_tables.cpp
-  imgui_widgets.cpp
-  imgui_stdlib.cpp
-  imgui_demo.cpp
-  Génération de code en cours...
-  ImGui-SFML.vcxproj -> D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\imgui-sfml-build\Debug\ImGui-SFML.lib
+﻿  ImGui-SFML.vcxproj -> D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\imgui-sfml-build\Debug\ImGui-SFML.lib

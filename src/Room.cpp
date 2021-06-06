@@ -1,24 +1,43 @@
 #include "Room.h"
 #include <iostream>
 
-Room::Room(sf::Vector2f pos, const sf::Texture* texture)
+Room::Room(sf::Vector2f pos, const sf::Texture* roomTexture, const sf::Texture* ennemyTexture)
 {
-	sprite.setSize(sf::Vector2f(50.0f, 50.0f));
-	sprite.setPosition(pos);
-	sprite.setTexture(texture);
+	roomSprite.setSize(sf::Vector2f(50, 50));
+	roomSprite.setPosition(pos);
+	roomSprite.setTexture(roomTexture);
+
+	contentSprite.setSize(sf::Vector2f(40, 40));
+	contentSprite.setPosition(pos + sf::Vector2f(5,5));
+	contentSprite.setTexture(ennemyTexture);
 }
 
 void Room::render(sf::RenderTarget& target)
 {
-	target.draw(sprite);
-}
-
-bool Room::tryStartCombat()
-{
+	target.draw(roomSprite);
 	if (!alreadyTriggered)
 	{
-		alreadyTriggered = true;
-		return true;
+		target.draw(contentSprite);
 	}
-	return false;
+}
+
+int Room::enterRoom()
+{
+	if (!alreadyTriggered && !victory)
+	{
+		alreadyTriggered = true;
+		return 1;
+	}
+	if (victory)
+	{
+		alreadyTriggered = true;
+		return 2;
+	}
+	return 0;
+}
+
+void Room::setFlag(const sf::Texture* flagTexture)
+{
+	victory = true;
+	contentSprite.setTexture(flagTexture);
 }

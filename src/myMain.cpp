@@ -1,15 +1,6 @@
-
 #include "myMain.h"
 #include "Game.h"
 
-
-int myMain()
-{
-	Game game;
-	game.run();
-	return 0;
-}
-/*
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/System/Clock.hpp>
 #include <SFML/Window/Event.hpp>
@@ -17,13 +8,19 @@ int myMain()
 #include <imgui-SFML.h>
 #include <imgui.h>
 
-int myMain() {
+
+int myMain()
+{
+    Game game;
+    game.run();
+    /*
     sf::RenderWindow window(sf::VideoMode(1280, 720), "ImGui + SFML = <3");
     window.setFramerateLimit(60);
     ImGui::SFML::Init(window);
 
     sf::Clock deltaClock;
     while (window.isOpen()) {
+
         sf::Event event;
         while (window.pollEvent(event)) {
             ImGui::SFML::ProcessEvent(event);
@@ -43,7 +40,7 @@ int myMain() {
     }
 
     ImGui::SFML::Shutdown();
-
+    */
     return 0;
 }
-*/
+

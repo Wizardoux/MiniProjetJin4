@@ -287,6 +287,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\State.h" />
     <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Weapon.cpp" />
     <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\Weapon.h" />
+    <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\WeaponButton.cpp" />
+    <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\WeaponButton.h" />
     <ClCompile Include="D:\Work\TSP2A\C++\RuinsOfScience\src\myMain.cpp" />
     <ClInclude Include="D:\Work\TSP2A\C++\RuinsOfScience\src\myMain.h" />
   </ItemGroup>

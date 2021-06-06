@@ -7,21 +7,27 @@
 
 class Character
 {
+	//Variables
 private:
 	int hp = 20;
 
 protected:
 	sf::RectangleShape sprite;
-	std::vector<std::unique_ptr<Weapon>> inventory;
+	std::vector<std::shared_ptr<Weapon>> inventory;
 
 public:
+	//Constructors/Destructor
 	Character(const sf::Texture* texture);
 	virtual ~Character() = default;
 
-	// Functions
-	void render(sf::RenderTarget& target);
+	//Others Functions
+	void render(sf::RenderTarget& target) const;
 	void takeDamage(int amount);
 	void useWeapon(int weaponIndex, Character& target);
-	bool checkIfDead();
+	bool checkIfDead() const;
+	void addWeapon(Weapon weapon);
+
+	//Getter
 	int getHp() const { return hp; }
+	std::vector<std::shared_ptr<Weapon>> getWeapon() { return inventory; }
 };

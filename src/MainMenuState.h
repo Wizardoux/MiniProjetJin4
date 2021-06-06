@@ -6,10 +6,10 @@ class MainMenuState : public State
 {
 private:
 	//Variables
-	sf::RectangleShape background;
-	std::vector<std::unique_ptr<Button>> buttons;
+	std::vector<Button> buttons;
 
-	//Functions
+	//Init Functions
+	void initBackground();
 	void initButtons();
 
 public:
@@ -17,7 +17,7 @@ public:
 	MainMenuState(RessourceManager* manager, std::stack<std::unique_ptr<State>>* states);
 	virtual ~MainMenuState() = default;
 
-	//Functions
+	//Engine Functions
 	void render(sf::RenderTarget& target) override;
 	void update() override;
 	void checkKeyInput(sf::Event event) override;

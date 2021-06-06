@@ -2,100 +2,145 @@
 #include <iostream>
 #include <Button.h>
 
+//Constructor
 CombatState::CombatState(RessourceManager* manager, std::stack<std::unique_ptr<State>>* states, std::shared_ptr<Player> player):
 	State(manager, states),
+	//Share the player with RoomState
 	player(player),
-	endTurnButton(sf::Vector2f(580,50), ressourceManager->getFont(), "end Turn", ressourceManager->getButtonTexture()),
-	playerAP(sf::Vector2f(30, 420), ressourceManager->getFont(), "Action: " + std::to_string(player->getAction()), ressourceManager->getButtonTexture())
+	ennemy(ressourceManager->getEnnemyTexture()),
+	//Initialize Buttons
+	playerHp(sf::Vector2f(30, 500), ressourceManager->getFont(), "health: " + std::to_string(player->getHp()), ressourceManager->getButtonTexture()),
+	ennemyHp(sf::Vector2f(800, 500), ressourceManager->getFont(),"ennemy: " + std::to_string(ennemy.getHp()), ressourceManager->getButtonTexture()),
+	endTurnButton(sf::Vector2f(800, 50), ressourceManager->getFont(), "end Turn", ressourceManager->getButtonTexture()),
+	playerAP(sf::Vector2f(30, 420), ressourceManager->getFont(), "Action: " + std::to_string(player->getAction()), ressourceManager->getButtonTexture()),
+	textBox(sf::Vector2f(240, 420), ressourceManager->getFont(), "Combat information here", ressourceManager->getTextboxTexture())
 {
-	ennemy = std::make_unique<Character>(ressourceManager->getEnnemyTexture());
-	background.setSize(sf::Vector2f(800, 600));
+	//Initialize rest of the variables
+	initBackground();
+	initPlayerSprite();
+	InitEnnemy();
+	initWeaponsBtns();
+	initTextBox();
+}
+
+//Init Functions
+void CombatState::initBackground()
+{
+	background.setSize(sf::Vector2f(1020, 600));
 	background.setTexture(ressourceManager->getInteriorTexture());
+}
+
+void CombatState::initPlayerSprite()
+{
 	playerSprite.setSize(sf::Vector2f(40, 40));
 	playerSprite.setTexture(ressourceManager->getPlayerTexture());
 	playerSprite.setPosition(sf::Vector2f(400, 300));
-	playerHp = std::make_unique<Button>(sf::Vector2f(30, 500), ressourceManager->getFont(),
-	"health: " + std::to_string(player->getHp()), ressourceManager->getButtonTexture());
-	ennemyHp = std::make_unique<Button>(sf::Vector2f(580, 500), ressourceManager->getFont(),
-	"ennemy: " + std::to_string(ennemy->getHp()), ressourceManager->getButtonTexture());
-	initWeaponsBtns();
 }
 
 void CombatState::initWeaponsBtns()
 {
-	sf::Vector2f pos(100, 120);
-	for (int i = 0; i < player->getnbWeapons(); i++)
+	//Create a button for each player's weapon and initialize vector of weapons
+	sf::Vector2f pos(30, 60);
+	playerWeapons = player->getWeapon();
+	for (auto&& weapon : playerWeapons)
 	{
-		weaponsBtns.push_back(std::make_unique<Button>(pos, ressourceManager->getFont(), "Weapon", ressourceManager->getButtonTexture()));
+		weaponsBtns.emplace_back(WeaponButton(pos, ressourceManager->getFont(), ressourceManager->getButtonTexture(), weapon));
 		pos.y += 80;
 	}
 }
 
+void CombatState::InitEnnemy()
+{
+	ennemy.addWeapon(ressourceManager->getRandomWeapon());
+	ennemyWeapons = ennemy.getWeapon();
+}
+
+void CombatState::initTextBox()
+{
+	textBox.setSize(sf::Vector2f(550, 150));
+}
+
+//Others Functions
 void CombatState::refreshUI()
 {
-	playerHp->setText("health: " + std::to_string(player->getHp()));
-	ennemyHp->setText("ennemy: " + std::to_string(ennemy->getHp()));
+	//Refresh values of the UI
+	playerHp.setText("health: " + std::to_string(player->getHp()));
+	ennemyHp.setText("ennemy: " + std::to_string(ennemy.getHp()));
 	playerAP.setText("Action: " + std::to_string(player->getAction()));
+}
+
+void CombatState::refreshCombat()
+{
+	refreshUI();
+	if (ennemy.checkIfDead() || player->checkIfDead())
+	{
+		exitState();
+	}
 }
 
 void CombatState::endTurn()
 {
+	//Increase of the player, and play the ennemy turn
 	player->increaseActionPoints();
-	ennemy->useWeapon(0, *player);
-	ressourceManager->playBlaster();
-	refreshUI();
-	if (ennemy->checkIfDead() || player->checkIfDead())
-	{
-		exitState();
-	}
+	playEnnemyTurn();
+	refreshCombat();
 }
 
+void CombatState::playEnnemyTurn()
+{
+	textBox.setText("ennemy use " + ennemyWeapons[0]->getName() + ", deals " + std::to_string(ennemyWeapons[0]->getDamage())
+	+ "\nbut suffer " + std::to_string(ennemyWeapons[0]->getRepercussion()));
+	ennemy.useWeapon(0, *player);
+	ressourceManager->playBlaster();
+}
+
+//Engine Functions
 void CombatState::render(sf::RenderTarget& target)
 {
 	target.draw(background);
 	target.draw(playerSprite);
-	ennemy->render(target);
-	for (auto&& button : weaponsBtns)
-	{
-		button->render(target);
-	}
-	playerHp->render(target);
-	ennemyHp->render(target);
+	ennemy.render(target);
+	playerHp.render(target);
+	ennemyHp.render(target);
 	endTurnButton.render(target);
 	playerAP.render(target);
+	for (auto& button : weaponsBtns)
+	{
+		button.render(target);
+	}
+	textBox.render(target);
 }
 
 void CombatState::update()
 {
+	//No current need to check something
 }
 
 void CombatState::checkKeyInput(sf::Event event)
 {
-	if (event.key.code == sf::Keyboard::Escape)
-	{
-		exitState();
-	}
+	//No Keyboard input to manage
 }
 
 void CombatState::checkMouseInput(sf::Event event, sf::Vector2f mousePos)
 {
+	//Check if the player click on a button
 	if (event.mouseButton.button == sf::Mouse::Left)
 	{
+		//Weapon Buttons
 		for (int i = 0; i < weaponsBtns.size(); i++)
 		{
-			if (weaponsBtns[i]->checkMouseOver(mousePos))
+			if (weaponsBtns[i].checkMouseOver(mousePos))
 			{
-				if (player->tryUseWeapon(i, *ennemy))
+				if (player->tryUseWeapon(i, ennemy))
 				{
+					textBox.setText("player use " + playerWeapons[i]->getName() + ", deals " + std::to_string(playerWeapons[i]->getDamage())
+					+ "\nbut suffer " + std::to_string(playerWeapons[i]->getRepercussion()));
 					ressourceManager->playBlaster();
 				}
-				refreshUI();
-				if (ennemy->checkIfDead() || player->checkIfDead())
-				{
-					exitState();
-				}
+				refreshCombat();
 			}
 		}
+		//EndTurn Button
 		if (endTurnButton.checkMouseOver(mousePos))
 		{
 			endTurn();

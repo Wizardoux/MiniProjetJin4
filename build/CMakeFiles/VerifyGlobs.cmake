@@ -34,6 +34,7 @@ set(OLD_GLOB
   "D:/Work/TSP2A/C++/RuinsOfScience/src/RoomState.cpp"
   "D:/Work/TSP2A/C++/RuinsOfScience/src/State.cpp"
   "D:/Work/TSP2A/C++/RuinsOfScience/src/Weapon.cpp"
+  "D:/Work/TSP2A/C++/RuinsOfScience/src/WeaponButton.cpp"
   "D:/Work/TSP2A/C++/RuinsOfScience/src/myMain.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
@@ -55,6 +56,7 @@ set(OLD_GLOB
   "D:/Work/TSP2A/C++/RuinsOfScience/src/RoomState.h"
   "D:/Work/TSP2A/C++/RuinsOfScience/src/State.h"
   "D:/Work/TSP2A/C++/RuinsOfScience/src/Weapon.h"
+  "D:/Work/TSP2A/C++/RuinsOfScience/src/WeaponButton.h"
   "D:/Work/TSP2A/C++/RuinsOfScience/src/myMain.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

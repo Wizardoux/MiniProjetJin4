@@ -7,7 +7,7 @@
 
 class Button
 {
-private:
+protected:
 	sf::RectangleShape sprite;
 	sf::Text buttonText;
 
@@ -18,6 +18,10 @@ public:
 
 	//Functions
 	bool checkMouseOver(const sf::Vector2f& mousePos);
-	void render(sf::RenderTarget& target);
+	virtual void render(sf::RenderTarget& target);
+	void centerText();
+
+	//Setter
 	void setText(std::string& text);
+	void setSize(sf::Vector2f size);
 };

@@ -9,7 +9,7 @@ class Character
 {
 	//Variables
 private:
-	int hp = 20;
+	int hp = 40;
 
 protected:
 	sf::RectangleShape sprite;

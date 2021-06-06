@@ -1,5 +1,4 @@
 #include "RessourceManager.h"
-#include <iostream>
 
 using json = nlohmann::json;
 
@@ -15,7 +14,6 @@ void RessourceManager::initWeapons()
 	std::ifstream read("../../resources/Weapon.json");	//Open Json file
 	json j;	//Create json
 	read >> j;	//Read Json file
-	std::cout << j;
 	for (auto weapon : j["weapons"])
 	{
 		std::string filename = weapon["Texture"]; //Find file texture name
@@ -52,7 +50,7 @@ void RessourceManager::initSounds()
 
 Weapon RessourceManager::getRandomWeapon()
 {
-	//Return a random
+	//Return a random weapon
 	std::random_device rd; // obtain a random number from hardware
 	std::mt19937 gen(rd()); // seed the generator
 	std::uniform_int_distribution<> distr(0, weapons.size() - 1); // define the range

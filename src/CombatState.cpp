@@ -40,7 +40,7 @@ void CombatState::initPlayerSprite()
 void CombatState::initWeaponsBtns()
 {
 	//Create a button for each player's weapon and initialize vector of weapons
-	sf::Vector2f pos(30, 60);
+	sf::Vector2f pos(30, 20);
 	playerWeapons = player->getWeapon();
 	for (auto&& weapon : playerWeapons)
 	{
@@ -51,6 +51,8 @@ void CombatState::initWeaponsBtns()
 
 void CombatState::InitEnnemy()
 {
+	ennemy.addWeapon(ressourceManager->getRandomWeapon());
+	ennemy.addWeapon(ressourceManager->getRandomWeapon());
 	ennemy.addWeapon(ressourceManager->getRandomWeapon());
 	ennemyWeapons = ennemy.getWeapon();
 }
@@ -74,6 +76,7 @@ void CombatState::refreshCombat()
 	refreshUI();
 	if (ennemy.checkIfDead() || player->checkIfDead())
 	{
+		stealWeapon();
 		exitState();
 	}
 }
@@ -88,10 +91,26 @@ void CombatState::endTurn()
 
 void CombatState::playEnnemyTurn()
 {
-	textBox.setText("ennemy use " + ennemyWeapons[0]->getName() + ", deals " + std::to_string(ennemyWeapons[0]->getDamage())
-	+ "\nbut suffer " + std::to_string(ennemyWeapons[0]->getRepercussion()));
-	ennemy.useWeapon(0, *player);
+	// Obtain a random index of a weapon used by the ennemy
+	std::random_device rd; // obtain a random number from hardware
+	std::mt19937 gen(rd()); // seed the generator
+	std::uniform_int_distribution<> distr(0, ennemyWeapons.size() - 1); // define the range
+	int randomIndex = distr(gen);
+	//Use this random weapon
+	ennemy.useWeapon(randomIndex, *player);
+	textBox.setText("ennemy use " + ennemyWeapons[randomIndex]->getName() + ", deals " + std::to_string(ennemyWeapons[randomIndex]->getDamage())
+	+ "\nbut suffer " + std::to_string(ennemyWeapons[randomIndex]->getRepercussion()));
 	ressourceManager->playBlaster();
+}
+
+void CombatState::stealWeapon()
+{
+	// Obtain a random index of a weapon used by the ennemy
+	std::random_device rd; // obtain a random number from hardware
+	std::mt19937 gen(rd()); // seed the generator
+	std::uniform_int_distribution<> distr(0, ennemyWeapons.size() - 1); // define the range
+	int randomIndex = distr(gen);
+	player->addWeapon(*ennemyWeapons[randomIndex]);
 }
 
 //Engine Functions

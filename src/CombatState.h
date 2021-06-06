@@ -31,6 +31,7 @@ private:
 	void refreshCombat();
 	void endTurn();
 	void playEnnemyTurn();
+	void stealWeapon();
 
 public:
 	// Constructor/Destructor

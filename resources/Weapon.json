@@ -2,8 +2,8 @@
   "weapons": [
     {
       "name": "Blaster",
-      "Damage": 5,
-      "Repercussion": 1,
+      "Damage": 10,
+      "Repercussion": 4,
 	"Cost":2,
 	"Texture": "blaster.png"	
 	
@@ -25,9 +25,49 @@
     {
       "name": "Vaccin",
       "Damage": 0,
-      "Repercussion": -10,
-	"Cost":4,
+      "Repercussion": -12,
+	"Cost":5,
 	"Texture": "vaccin.png"
-    }   
+    },
+    {
+      "name": "Vacuum",
+      "Damage": 5,
+      "Repercussion": -5,
+	"Cost":5,
+	"Texture": "vacuum.png"	
+	
+    },
+    {
+      "name": "cpp_gun",
+      "Damage": 1,
+      "Repercussion": 5,
+	"Cost":1,
+	"Texture": "cppgun.png"	
+	
+    },
+    {
+      "name": "Saber",
+      "Damage": 5,
+      "Repercussion": 10,
+	"Cost":0,
+	"Texture": "saber.png"	
+	
+    },
+    {
+      "name": "Serum",
+      "Damage": 0,
+      "Repercussion": -2,
+	"Cost":1,
+	"Texture": "serum.png"	
+	
+    },
+    {
+      "name": "Shotgun",
+      "Damage": 12,
+      "Repercussion": 7,
+	"Cost":3,
+	"Texture": "shotgun.png"	
+	
+    }
   ]
 }

@@ -25,21 +25,20 @@ void RoomState::initPlayer()
 	player = std::make_shared<Player>(sf::Vector2f(305, 285), ressourceManager->getPlayerTexture());
 	player->addWeapon(ressourceManager->getRandomWeapon());
 	player->addWeapon(ressourceManager->getRandomWeapon());
-	player->addWeapon(ressourceManager->getRandomWeapon());
 }
 
 void RoomState::initDungeon()
 {
 	//Create a dungeon with rooms
 	sf::Vector2f pos(300, 280);
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 6; i++)
 	{
 		rooms.emplace_back(Room(pos, ressourceManager->getRoomTexture(), ressourceManager->getEnnemyTexture()));
 		pos.x += 60;
 	}
 	//Make the first room of the dungeon safe
 	rooms[0].useRoom();
-	rooms[4].setFlag(ressourceManager->getFlagTexture());
+	rooms[5].setFlag(ressourceManager->getFlagTexture());
 }
 
 //Others Functions

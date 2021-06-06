@@ -11,7 +11,7 @@ Player::Player(sf::Vector2f pos, const sf::Texture* texture):
 void Player::moveFrwd()
 {
 	//Call in roomstate to move the character
-	if (indexRoom < 4)
+	if (indexRoom < 5)
 	{
 		sprite.move(60, 0);
 		indexRoom++;

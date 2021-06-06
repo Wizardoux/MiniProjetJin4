@@ -23,6 +23,7 @@ private:
 	sf::Texture vaccinTexture;
 	sf::Texture flagTexture;
 	sf::Texture textboxTexture;
+	std::vector < std::unique_ptr <sf::Texture>> Weaponstextures;
 
 	//Sounds
 	sf::Music menuMusic;

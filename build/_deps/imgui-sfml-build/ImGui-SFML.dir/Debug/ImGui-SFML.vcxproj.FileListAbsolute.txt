@@ -1,2 +1,0 @@
-D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\imgui-sfml-build\Debug\ImGui-SFML.pdb
-D:\Work\TSP2A\C++\RuinsOfScience\build\_deps\imgui-sfml-build\ImGui-SFML.dir\Debug\ImGui-SFML.pdb

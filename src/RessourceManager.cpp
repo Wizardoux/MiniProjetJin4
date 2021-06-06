@@ -1,6 +1,12 @@
 #include "RessourceManager.h"
 #include <iostream>
 #include <random>
+#include <../JSON/json.hpp>
+#include <fstream>
+#include <string>
+#include "Weapon.h"
+
+using json = nlohmann::json;
 
 RessourceManager::RessourceManager()
 {
@@ -11,10 +17,19 @@ RessourceManager::RessourceManager()
 
 void RessourceManager::initWeapons()
 {
-	weapons.emplace_back(Weapon("Blaster", 5, 1, 2, &blasterTexture));
-	weapons.emplace_back(Weapon("Sniper", 20, 0, 6, &sniperTexture));
-	weapons.emplace_back(Weapon("vaccin", 0, -10, 4, &vaccinTexture));
-	weapons.emplace_back(Weapon("grenade", 10, 10, 1, &grenadeTexture));
+	std::ifstream read("../../resources/Weapon.json");
+	json j;
+	read >> j;
+	int size = j["weapons"].size();
+	for (int k = 0; k < size; k++) {
+		std::string filename = j["weapons"][k]["Texture"];
+		Weaponstextures.push_back(std::make_unique<sf::Texture>());
+		Weaponstextures.back()->loadFromFile(filename);
+		weapons.emplace_back(Weapon(j["weapons"][k]["name"], j["weapons"][k]["Damage"], j["weapons"][k]["Repercussion"], j["weapons"][k]["Cost"],
+			&*Weaponstextures.back()));
+		std::cout << filename;
+
+	}
 }
 
 void RessourceManager::initTextures()

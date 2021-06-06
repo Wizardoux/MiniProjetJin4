@@ -1,2 +1,0 @@
-D:\Work\TSP2A\C++\RuinsOfScience\build\src\Debug\src.pdb
-D:\Work\TSP2A\C++\RuinsOfScience\build\src\src.dir\Debug\src.pdb

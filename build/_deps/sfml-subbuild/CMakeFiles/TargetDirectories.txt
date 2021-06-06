@@ -1,3 +1,0 @@
-D:/Work/TSP2A/C++/RuinsOfScience/build/_deps/sfml-subbuild/CMakeFiles/sfml-populate.dir
-D:/Work/TSP2A/C++/RuinsOfScience/build/_deps/sfml-subbuild/CMakeFiles/ALL_BUILD.dir
-D:/Work/TSP2A/C++/RuinsOfScience/build/_deps/sfml-subbuild/CMakeFiles/ZERO_CHECK.dir

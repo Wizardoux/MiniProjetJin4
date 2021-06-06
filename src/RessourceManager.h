@@ -4,6 +4,10 @@
 #include <SFML/Audio.hpp>
 #include <SFML/System.hpp>
 #include "Weapon.h"
+#include <random>
+#include <../JSON/json.hpp>
+#include <fstream>
+#include <string>
 
 class RessourceManager
 {
@@ -17,10 +21,6 @@ private:
 	sf::Texture menuTexture;
 	sf::Texture interiorTexture;
 	sf::Texture spaceshipTexture;
-	sf::Texture blasterTexture;
-	sf::Texture sniperTexture;
-	sf::Texture grenadeTexture;
-	sf::Texture vaccinTexture;
 	sf::Texture flagTexture;
 	sf::Texture textboxTexture;
 	std::vector < std::unique_ptr <sf::Texture>> Weaponstextures;

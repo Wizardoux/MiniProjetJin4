@@ -1,10 +1,5 @@
 #include "RessourceManager.h"
 #include <iostream>
-#include <random>
-#include <../JSON/json.hpp>
-#include <fstream>
-#include <string>
-#include "Weapon.h"
 
 using json = nlohmann::json;
 
@@ -17,46 +12,41 @@ RessourceManager::RessourceManager()
 
 void RessourceManager::initWeapons()
 {
-	std::ifstream read("../../resources/Weapon.json");
-	json j;
-	read >> j;
-	int size = j["weapons"].size();
-	for (int k = 0; k < size; k++) {
-		std::string filename = j["weapons"][k]["Texture"];
-		Weaponstextures.push_back(std::make_unique<sf::Texture>());
-		Weaponstextures.back()->loadFromFile(filename);
-		weapons.emplace_back(Weapon(j["weapons"][k]["name"], j["weapons"][k]["Damage"], j["weapons"][k]["Repercussion"], j["weapons"][k]["Cost"],
-			&*Weaponstextures.back()));
-		std::cout << filename;
-
+	std::ifstream read("../../resources/Weapon.json");	//Open Json file
+	json j;	//Create json
+	read >> j;	//Read Json file
+	std::cout << j;
+	for (auto weapon : j["weapons"])
+	{
+		std::string filename = weapon["Texture"]; //Find file texture name
+		Weaponstextures.push_back(std::make_unique<sf::Texture>());	//Add the texture to the vector
+		Weaponstextures.back()->loadFromFile("../../resources/" + filename);
+		weapons.emplace_back(weapon["name"],weapon["Damage"],weapon["Repercussion"],
+		weapon["Cost"],&*Weaponstextures.back()); //Add a weapon with json stats in the vector
 	}
 }
 
 void RessourceManager::initTextures()
 {
-	gameFont.loadFromFile("Thirteen-Pixel-Fonts.ttf");
-	roomTexture.loadFromFile("room.png");
-	flagTexture.loadFromFile("flag.png");
-	textboxTexture.loadFromFile("textbox.png");
-	spaceshipTexture.loadFromFile("spaceship.png");
-	playerTexture.loadFromFile("player.png");
-	ennemyTexture.loadFromFile("spacemarine.png");
-	buttonTexture.loadFromFile("buttonsci-fi.png");
-	interiorTexture.loadFromFile("interior.png");
-	menuTexture.loadFromFile("menu.png");
-	vaccinTexture.loadFromFile("vaccin.png");
-	blasterTexture.loadFromFile("blaster.png");
-	sniperTexture.loadFromFile("sniper.png");
-	grenadeTexture.loadFromFile("grenade.png");
+	gameFont.loadFromFile("../../resources/Thirteen-Pixel-Fonts.ttf");
+	roomTexture.loadFromFile("../../resources/room.png");
+	flagTexture.loadFromFile("../../resources/flag.png");
+	textboxTexture.loadFromFile("../../resources/textbox.png");
+	spaceshipTexture.loadFromFile("../../resources/spaceship.png");
+	playerTexture.loadFromFile("../../resources/player.png");
+	ennemyTexture.loadFromFile("../../resources/spacemarine.png");
+	buttonTexture.loadFromFile("../../resources/buttonsci-fi.png");
+	interiorTexture.loadFromFile("../../resources/interior.png");
+	menuTexture.loadFromFile("../../resources/menu.png");
 }
 
 void RessourceManager::initSounds()
 {
-	menuMusic.openFromFile("MARiAN - Retro Sci Fi.wav");
+	menuMusic.openFromFile("../../resources/MARiAN - Retro Sci Fi.wav");
 	menuMusic.setLoop(true);
-	gameMusic.openFromFile("Sci-Fi Technology.wav");
+	gameMusic.openFromFile("../../resources/Sci-Fi Technology.wav");
 	gameMusic.setLoop(true);
-	SFXbuffer.loadFromFile("blaster.wav");
+	SFXbuffer.loadFromFile("../../resources/blaster.wav");
 	SFXsound.setBuffer(SFXbuffer);
 }
 

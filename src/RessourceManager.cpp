@@ -2,6 +2,7 @@
 
 using json = nlohmann::json;
 
+//Constructor
 RessourceManager::RessourceManager()
 {
 	initTextures();
@@ -9,6 +10,7 @@ RessourceManager::RessourceManager()
 	initWeapons();
 }
 
+//Initialize vector of weapons with a json file
 void RessourceManager::initWeapons()
 {
 	std::ifstream read("../../resources/Weapon.json");	//Open Json file

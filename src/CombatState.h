@@ -7,7 +7,7 @@ class CombatState : public State
 {
 private:
 	//Variables
-	std::shared_ptr<Player> player;
+	Player* player;
 	std::vector<std::shared_ptr<Weapon>> playerWeapons;
 	std::vector<std::shared_ptr<Weapon>> ennemyWeapons;
 	Character ennemy;
@@ -33,9 +33,12 @@ private:
 	void playEnnemyTurn();
 	void stealWeapon();
 
+	//Imgui Functions
+	void renderImgui() override;
+
 public:
 	// Constructor/Destructor
-	CombatState(RessourceManager* manager, std::stack<std::unique_ptr<State>>* states, std::shared_ptr<Player> player);
+	CombatState(RessourceManager* manager, std::stack<std::unique_ptr<State>>* states, Player* player);
 	virtual ~CombatState() = default;
 
 	//Engine Functions

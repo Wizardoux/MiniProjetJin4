@@ -3,7 +3,7 @@
 #include <Button.h>
 
 //Constructor
-CombatState::CombatState(RessourceManager* manager, std::stack<std::unique_ptr<State>>* states, std::shared_ptr<Player> player):
+CombatState::CombatState(RessourceManager* manager, std::stack<std::unique_ptr<State>>* states, Player* player):
 	State(manager, states),
 	//Share the player with RoomState
 	player(player),
@@ -98,7 +98,7 @@ void CombatState::playEnnemyTurn()
 	int randomIndex = distr(gen);
 	//Use this random weapon
 	ennemy.useWeapon(randomIndex, *player);
-	textBox.setText("ennemy use " + ennemyWeapons[randomIndex]->getName() + ", deals " + std::to_string(ennemyWeapons[randomIndex]->getDamage())
+	textBox.setText("ennemy uses " + ennemyWeapons[randomIndex]->getName() + ", deals " + std::to_string(ennemyWeapons[randomIndex]->getDamage())
 	+ "\nbut suffer " + std::to_string(ennemyWeapons[randomIndex]->getRepercussion()));
 	ressourceManager->playBlaster();
 }
@@ -152,7 +152,7 @@ void CombatState::checkMouseInput(sf::Event event, sf::Vector2f mousePos)
 			{
 				if (player->tryUseWeapon(i, ennemy))
 				{
-					textBox.setText("player use " + playerWeapons[i]->getName() + ", deals " + std::to_string(playerWeapons[i]->getDamage())
+					textBox.setText("player uses " + playerWeapons[i]->getName() + ", deals " + std::to_string(playerWeapons[i]->getDamage())
 					+ "\nbut suffer " + std::to_string(playerWeapons[i]->getRepercussion()));
 					ressourceManager->playBlaster();
 				}
@@ -170,4 +170,26 @@ void CombatState::checkMouseInput(sf::Event event, sf::Vector2f mousePos)
 void CombatState::endState()
 {
 	std::cout << "Ending Game State\n";
+}
+
+//Imgui Functions
+void CombatState::renderImgui()
+{
+	ImGui::Begin("Cheat");
+	//Button to heal the player
+	if (ImGui::Button("Heal Player")) {
+		player->takeDamage(-10);
+		refreshUI();
+	}
+	//Button to increase actions of the player
+	if (ImGui::Button("Get Action")) {
+		player->increaseActionPoints();
+		refreshUI();
+	}
+	//Button to kill the ennemy
+	if (ImGui::Button("Kill Ennemy")) {
+		ennemy.takeDamage(ennemy.getHp());
+		refreshCombat();
+	}
+	ImGui::End();
 }

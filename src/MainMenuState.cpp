@@ -74,3 +74,10 @@ void MainMenuState::endState()
 	ressourceManager->stopMenuMusic();
 	std::cout << "Ending Menu State\n";
 }
+
+//Imgui Functions
+void MainMenuState::renderImgui()
+{
+	ImGui::Begin("MainMenu");
+	ImGui::End();
+}

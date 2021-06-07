@@ -23,4 +23,7 @@ public:
 	void checkKeyInput(sf::Event event) override;
 	void checkMouseInput(sf::Event event, sf::Vector2f mousePos) override;
 	void endState() override;
+
+	//Imgui Functions
+	void renderImgui() override;
 };

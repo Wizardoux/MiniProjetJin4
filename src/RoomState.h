@@ -3,12 +3,14 @@
 #include "Player.h"
 #include "Room.h"
 #include "Weapon.h"
+#include <imgui-SFML.h>
+#include <imgui.h>
 
 class RoomState : public State
 {
 private:
 	//Variables
-	std::shared_ptr<Player> player;
+	Player player;
 	std::vector<Room> rooms;
 
 	//Init Functions
@@ -30,4 +32,7 @@ public:
 	void checkKeyInput(sf::Event event) override;
 	void checkMouseInput(sf::Event event, sf::Vector2f mousePos) override;
 	void endState() override;
+
+	//Imgui Functions
+	void renderImgui() override;
 };

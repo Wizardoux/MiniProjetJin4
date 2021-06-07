@@ -3,7 +3,8 @@
 
 //Constructor
 RoomState::RoomState(RessourceManager* manager, std::stack<std::unique_ptr<State>>* states):
-	State(manager, states)
+	State(manager, states),
+	player(sf::Vector2f(305, 285), ressourceManager->getPlayerTexture())
 {
 	//Play menu music
 	ressourceManager->playGameMusic();
@@ -22,9 +23,8 @@ void RoomState::initBackground()
 
 void RoomState::initPlayer()
 {
-	player = std::make_shared<Player>(sf::Vector2f(305, 285), ressourceManager->getPlayerTexture());
-	player->addWeapon(ressourceManager->getRandomWeapon());
-	player->addWeapon(ressourceManager->getRandomWeapon());
+	player.addWeapon(ressourceManager->getRandomWeapon());
+	player.addWeapon(ressourceManager->getRandomWeapon());
 }
 
 void RoomState::initDungeon()
@@ -44,8 +44,8 @@ void RoomState::initDungeon()
 //Others Functions
 void RoomState::StartCombat()
 {
-	player->refreshActionPoints();
-	states->push(std::make_unique<CombatState>(ressourceManager, states, player));
+	player.refreshActionPoints();
+	states->push(std::make_unique<CombatState>(ressourceManager, states, &player));
 }
 
 //Engine Functions
@@ -56,12 +56,12 @@ void RoomState::render(sf::RenderTarget& target)
 	{
 		room.render(target);
 	}
-	player->render(target);
+	player.render(target);
 }
 
 void RoomState::update()
 {
-	if (player->checkIfDead())
+	if (player.checkIfDead())
 	{
 		exitState();
 	}
@@ -69,26 +69,27 @@ void RoomState::update()
 
 void RoomState::checkKeyInput(sf::Event event)
 {
+	//Check player movement and enters in the room
 	if (event.key.code == sf::Keyboard::Left)
 	{
-		player->moveBack();
-		if (rooms[player->getIndex()].enterRoom() == 1)
+		player.moveBack();
+		if (rooms[player.getIndex()].enterRoom() == 1)
 		{
 			StartCombat();
 		}
-		if (rooms[player->getIndex()].enterRoom() == 2)
+		if (rooms[player.getIndex()].enterRoom() == 2)
 		{
 			exitState();
 		}
 	}
 	else if (event.key.code == sf::Keyboard::Right)
 	{
-		player->moveFrwd();
-		if (rooms[player->getIndex()].enterRoom() == 1)
+		player.moveFrwd();
+		if (rooms[player.getIndex()].enterRoom() == 1)
 		{
 			StartCombat();
 		}
-		if (rooms[player->getIndex()].enterRoom() == 2)
+		if (rooms[player.getIndex()].enterRoom() == 2)
 		{
 			exitState();
 		}
@@ -105,4 +106,18 @@ void RoomState::endState()
 	ressourceManager->stopGameMusic();
 	ressourceManager->playMenuMusic();
 	std::cout << "Ending Game State\n";
+}
+
+//Imgui Functions
+void RoomState::renderImgui()
+{
+	ImGui::Begin("Spaceship");
+	//Button to kill all ennemy of the dungeon
+	if (ImGui::Button("clean dungeon")) {
+		for (auto& room : rooms)
+		{
+			room.enterRoom();
+		}
+	}
+	ImGui::End();
 }

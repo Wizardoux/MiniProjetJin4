@@ -1,4 +1,5 @@
 #pragma once
+#define TESTBUILD
 #include <gtest/gtest.h>
 #include "Player.h"
 #include "Button.h"
@@ -31,7 +32,7 @@ TEST(TestRoom, TestBase) {
 //Combat System test
 TEST(TestCombat, TestBase) {
 	sf::Texture texture;
-	Weapon testWeapon("testWeapon", 10, 5, 5, &texture);
+	Weapon testWeapon("testWeapon", 20, 5, 5, &texture);
 	Character ennemy(&texture);
 	Player player(sf::Vector2f(0, 0), &texture);
 	EXPECT_EQ(player.getWeapon().size(), 0);
@@ -39,13 +40,13 @@ TEST(TestCombat, TestBase) {
 	player.addWeapon(testWeapon);
 	EXPECT_EQ(player.getWeapon().size(), 1); //check inventory of the player
 	EXPECT_EQ(player.tryUseWeapon(0, ennemy), true); //check the player can use testWeapon
-	EXPECT_EQ(ennemy.getHp(), 10); //check it hurts ennemy
+	EXPECT_EQ(ennemy.getHp(), 20); //check it hurts ennemy
 	EXPECT_EQ(ennemy.checkIfDead(), false); //check if ennemy is still alive
 	EXPECT_EQ(player.tryUseWeapon(0, ennemy), false); //check the player can't use testWeapon any longer
 	//ennemy turn
 	player.increaseActionPoints();
 	ennemy.useWeapon(0, player);
-	EXPECT_EQ(player.getHp(), 5); //check player's Hp
+	EXPECT_EQ(player.getHp(), 15); //check player's Hp
 	EXPECT_EQ(player.tryUseWeapon(0, ennemy), true);
 	EXPECT_EQ(ennemy.checkIfDead(), true); //check the ennemy is dead
 }

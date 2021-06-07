@@ -5,6 +5,13 @@
 void Game::initWindow()
 {
     window.setFramerateLimit(60);
+    window.setPosition(sf::Vector2i(700, 200));
+}
+
+void Game::initIMGUI()
+{
+    ImGui::SFML::Init(ImguiWindow);
+    ImguiWindow.setPosition(sf::Vector2i(50, 200));
 }
 
 void Game::initStates()
@@ -17,6 +24,7 @@ void Game::initStates()
 Game::Game()
 {
     initWindow();
+    initIMGUI();
     initStates();
 }
 
@@ -106,7 +114,32 @@ void Game::run()
 {
     while (window.isOpen())
     {
+        //Game part
         update();
         render();
+        //IMGUI part
+        updateIMGUI();
+        renderIMGUI();
     }
+}
+
+//Imgui Functions
+void Game::updateIMGUI()
+{
+    while (ImguiWindow.pollEvent(sfEvent))
+    {
+        ImGui::SFML::ProcessEvent(sfEvent);
+    }
+    ImGui::SFML::Update(ImguiWindow, deltaClock.restart());
+}
+
+void Game::renderIMGUI()
+{
+    if (!states.empty())
+    {
+        states.top()->renderImgui();
+    }
+    ImguiWindow.clear();
+    ImGui::SFML::Render(ImguiWindow);
+    ImguiWindow.display();
 }

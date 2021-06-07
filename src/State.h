@@ -6,6 +6,10 @@
 #include <SFML/Audio.hpp>
 #include <SFML/System.hpp>
 #include "RessourceManager.h"
+#ifndef TESTBUILD
+#include <imgui-SFML.h>
+#include <imgui.h>
+#endif // !TESTBUILD
 
 class State
 {
@@ -29,6 +33,9 @@ public:
 	virtual void checkMouseInput(sf::Event event, sf::Vector2f mousePos) = 0;
 	virtual void exitState();
 	virtual void endState() = 0;
+
+	//Imgui Functions
+	virtual void renderImgui() = 0;
 
 	//Getter
 	bool getQuit() const { return quit; }

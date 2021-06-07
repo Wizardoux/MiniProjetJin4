@@ -30,7 +30,6 @@ int Room::enterRoom()
 	}
 	if (victory)
 	{
-		alreadyTriggered = true;
 		return 2;
 	}
 	return 0;

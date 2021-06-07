@@ -14,11 +14,11 @@ protected:
 public:
 	// Constructor/Destructor
 	Button(sf::Vector2f position, const sf::Font* font, const std::string &text, const sf::Texture* texture);
-	virtual ~Button() = default;
+	~Button() = default;
 
 	//Functions
 	bool checkMouseOver(const sf::Vector2f& mousePos);
-	virtual void render(sf::RenderTarget& target);
+	void render(sf::RenderTarget& target);
 	void centerText();
 
 	//Setter

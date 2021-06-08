@@ -25,7 +25,7 @@ private:
 	void initStates();
 
 	//IMGUI Variables
-	sf::RenderWindow ImguiWindow = sf::RenderWindow(sf::VideoMode(600,600), "Console", sf::Style::Titlebar);
+	sf::RenderWindow ImguiWindow = sf::RenderWindow(sf::VideoMode(400,300), "Console", sf::Style::Titlebar);
 	sf::Clock deltaClock;
 
 public:

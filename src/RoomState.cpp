@@ -49,7 +49,7 @@ void RoomState::StartCombat()
 }
 
 //Engine Functions
-void RoomState::render(sf::RenderTarget& target)
+void RoomState::render(sf::RenderTarget& target) const
 {
 	target.draw(background);
 	for (auto& room : rooms)

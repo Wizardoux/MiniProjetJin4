@@ -99,7 +99,7 @@ void CombatState::playEnnemyTurn()
 	//Use this random weapon
 	ennemy.useWeapon(randomIndex, *player);
 	textBox.setText("ennemy uses " + ennemyWeapons[randomIndex]->getName() + ", deals " + std::to_string(ennemyWeapons[randomIndex]->getDamage())
-	+ "\nbut suffer " + std::to_string(ennemyWeapons[randomIndex]->getRepercussion()));
+	+ "\nbut receives " + std::to_string(ennemyWeapons[randomIndex]->getRepercussion()));
 	ressourceManager->playBlaster();
 }
 
@@ -114,7 +114,7 @@ void CombatState::stealWeapon()
 }
 
 //Engine Functions
-void CombatState::render(sf::RenderTarget& target)
+void CombatState::render(sf::RenderTarget& target) const
 {
 	target.draw(background);
 	target.draw(playerSprite);
@@ -153,7 +153,7 @@ void CombatState::checkMouseInput(sf::Event event, sf::Vector2f mousePos)
 				if (player->tryUseWeapon(i, ennemy))
 				{
 					textBox.setText("player uses " + playerWeapons[i]->getName() + ", deals " + std::to_string(playerWeapons[i]->getDamage())
-					+ "\nbut suffer " + std::to_string(playerWeapons[i]->getRepercussion()));
+					+ "\nbut receives " + std::to_string(playerWeapons[i]->getRepercussion()));
 					ressourceManager->playBlaster();
 				}
 				refreshCombat();

@@ -14,7 +14,7 @@ WeaponButton::WeaponButton(sf::Vector2f position, const sf::Font* font, const sf
 	weaponSprite.setTexture(weapon->getTexture());
 }
 
-void WeaponButton::render(sf::RenderTarget& target)
+void WeaponButton::render(sf::RenderTarget& target) const
 {
 	Button::render(target);
 	target.draw(weaponSprite);

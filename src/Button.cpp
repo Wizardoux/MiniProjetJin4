@@ -17,7 +17,7 @@ Button::Button(sf::Vector2f position, const sf::Font* font, const std::string& t
 };
 
 //Others Functions
-bool Button::checkMouseOver(const sf::Vector2f& mousePos)
+bool Button::checkMouseOver(const sf::Vector2f& mousePos) const
 {
 	if (sprite.getGlobalBounds().contains(mousePos))
 	{
@@ -26,7 +26,7 @@ bool Button::checkMouseOver(const sf::Vector2f& mousePos)
 	return false;
 }
 
-void Button::render(sf::RenderTarget& target)
+void Button::render(sf::RenderTarget& target) const
 {
 	target.draw(sprite);
 	target.draw(buttonText);

@@ -12,7 +12,7 @@ Room::Room(sf::Vector2f pos, const sf::Texture* roomTexture, const sf::Texture* 
 	contentSprite.setTexture(ennemyTexture);
 }
 
-void Room::render(sf::RenderTarget& target)
+void Room::render(sf::RenderTarget& target) const
 {
 	target.draw(roomSprite);
 	if (!alreadyTriggered)

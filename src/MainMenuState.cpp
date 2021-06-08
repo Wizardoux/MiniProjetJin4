@@ -30,7 +30,7 @@ void MainMenuState::initButtons()
 }
 
 //Engine Functions
-void MainMenuState::render(sf::RenderTarget& target)
+void MainMenuState::render(sf::RenderTarget& target) const
 {
 	target.draw(background);
 	for (auto& btn : buttons)

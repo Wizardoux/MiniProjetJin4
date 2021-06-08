@@ -17,8 +17,8 @@ public:
 	~Button() = default;
 
 	//Functions
-	bool checkMouseOver(const sf::Vector2f& mousePos);
-	void render(sf::RenderTarget& target);
+	bool checkMouseOver(const sf::Vector2f& mousePos) const;
+	void render(sf::RenderTarget& target) const;
 	void centerText();
 
 	//Setter

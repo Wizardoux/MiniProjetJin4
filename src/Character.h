@@ -17,7 +17,7 @@ protected:
 
 public:
 	//Constructors/Destructor
-	Character(const sf::Texture* texture);
+	explicit Character(const sf::Texture* texture);
 	virtual ~Character() = default;
 
 	//Others Functions
@@ -29,5 +29,5 @@ public:
 
 	//Getter
 	int getHp() const { return hp; }
-	std::vector<std::shared_ptr<Weapon>> getWeapon() { return inventory; }
+	std::vector<std::shared_ptr<Weapon>> getWeapon() const { return inventory; }
 };

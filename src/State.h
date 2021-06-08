@@ -27,7 +27,7 @@ public:
 	virtual ~State() = default;
 
 	//Others Functions
-	virtual void render(sf::RenderTarget& target) = 0;
+	virtual void render(sf::RenderTarget& target) const = 0;
 	virtual void update() = 0;
 	virtual void checkKeyInput(sf::Event event) = 0;
 	virtual void checkMouseInput(sf::Event event, sf::Vector2f mousePos) = 0;

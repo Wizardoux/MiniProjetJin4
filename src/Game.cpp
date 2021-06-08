@@ -5,13 +5,12 @@
 void Game::initWindow()
 {
     window.setFramerateLimit(60);
-    window.setPosition(sf::Vector2i(700, 200));
 }
 
 void Game::initIMGUI()
 {
     ImGui::SFML::Init(ImguiWindow);
-    ImguiWindow.setPosition(sf::Vector2i(50, 200));
+    ImguiWindow.setPosition(sf::Vector2i(20, 250));
 }
 
 void Game::initStates()

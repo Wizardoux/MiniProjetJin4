@@ -14,5 +14,5 @@ public:
 
 	//Others Functions
 	using Button :: checkMouseOver;
-	void render(sf::RenderTarget& target);
+	void render(sf::RenderTarget& target) const;
 };

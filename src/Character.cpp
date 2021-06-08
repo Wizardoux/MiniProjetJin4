@@ -25,7 +25,6 @@ void Character::useWeapon(int weaponIndex, Character& target)
 	{
 		target.takeDamage(inventory[weaponIndex]->getDamage());
 		takeDamage(inventory[weaponIndex]->getRepercussion());
-		std::cout << "player deals " << inventory[weaponIndex]->getDamage() << "and takes " << inventory[weaponIndex]->getRepercussion() << "\n";
 	}
 }
 

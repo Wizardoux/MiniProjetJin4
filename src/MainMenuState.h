@@ -18,7 +18,7 @@ public:
 	virtual ~MainMenuState() = default;
 
 	//Engine Functions
-	void render(sf::RenderTarget& target) override;
+	void render(sf::RenderTarget& target) const override;
 	void update() override;
 	void checkKeyInput(sf::Event event) override;
 	void checkMouseInput(sf::Event event, sf::Vector2f mousePos) override;

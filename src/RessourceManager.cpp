@@ -50,7 +50,7 @@ void RessourceManager::initSounds()
 	SFXsound.setBuffer(SFXbuffer);
 }
 
-Weapon RessourceManager::getRandomWeapon()
+Weapon RessourceManager::getRandomWeapon() const
 {
 	//Return a random weapon
 	std::random_device rd; // obtain a random number from hardware

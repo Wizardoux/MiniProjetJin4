@@ -56,7 +56,7 @@ public:
 	sf::Texture* getFlagTexture() { return &flagTexture; }
 	sf::Texture* getTextboxTexture() { return &textboxTexture; }
 	//Weapon Getter
-	Weapon getRandomWeapon();
+	Weapon getRandomWeapon() const;
 
 	//Sounds Functions
 	void playMenuMusic() { menuMusic.play(); }

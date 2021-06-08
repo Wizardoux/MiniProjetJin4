@@ -20,7 +20,7 @@ public:
 	virtual ~Room() = default;
 
 	// Functions
-	void render(sf::RenderTarget& target);
+	void render(sf::RenderTarget& target) const;
 	int enterRoom();
 	void useRoom() { alreadyTriggered = true; }
 	void setFlag(const sf::Texture* flagTexture);

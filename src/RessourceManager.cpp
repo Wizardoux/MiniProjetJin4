@@ -38,6 +38,7 @@ void RessourceManager::initTextures()
 	buttonTexture.loadFromFile("../../resources/buttonsci-fi.png");
 	interiorTexture.loadFromFile("../../resources/interior.png");
 	menuTexture.loadFromFile("../../resources/menu.png");
+	victoryTexture.loadFromFile("../../resources/victory.jpg");
 }
 
 void RessourceManager::initSounds()

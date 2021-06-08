@@ -5,6 +5,7 @@
 #include "Weapon.h"
 #include <imgui-SFML.h>
 #include <imgui.h>
+#include "VictoryState.h"
 
 class RoomState : public State
 {
@@ -20,6 +21,7 @@ private:
 
 	//Others Functions
 	void StartCombat();
+	void displayVictory();
 
 public:
 	// Constructor/Destructor

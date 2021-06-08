@@ -23,6 +23,7 @@ private:
 	sf::Texture spaceshipTexture;
 	sf::Texture flagTexture;
 	sf::Texture textboxTexture;
+	sf::Texture victoryTexture;
 	std::vector < std::unique_ptr <sf::Texture>> Weaponstextures;
 
 	//Sounds
@@ -55,6 +56,7 @@ public:
 	sf::Texture* getSpaceshipTexture() { return &spaceshipTexture; }
 	sf::Texture* getFlagTexture() { return &flagTexture; }
 	sf::Texture* getTextboxTexture() { return &textboxTexture; }
+	sf::Texture* getVictoryTexture() { return &victoryTexture; }
 	//Weapon Getter
 	Weapon getRandomWeapon() const;
 

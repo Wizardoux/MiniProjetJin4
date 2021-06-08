@@ -48,6 +48,13 @@ void RoomState::StartCombat()
 	states->push(std::make_unique<CombatState>(ressourceManager, states, &player));
 }
 
+void RoomState::displayVictory()
+{
+	//Kill the player to return directly to the main menu
+	player.takeDamage(player.getHp());
+	states->push(std::make_unique<VictoryState>(ressourceManager, states));
+}
+
 //Engine Functions
 void RoomState::render(sf::RenderTarget& target) const
 {
@@ -79,7 +86,7 @@ void RoomState::checkKeyInput(sf::Event event)
 		}
 		if (rooms[player.getIndex()].enterRoom() == 2)
 		{
-			exitState();
+			displayVictory();
 		}
 	}
 	else if (event.key.code == sf::Keyboard::Right)
@@ -91,7 +98,7 @@ void RoomState::checkKeyInput(sf::Event event)
 		}
 		if (rooms[player.getIndex()].enterRoom() == 2)
 		{
-			exitState();
+			displayVictory();
 		}
 	}
 }
